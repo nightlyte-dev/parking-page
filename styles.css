@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(45deg, #000080, #4169e1, #000080);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  font-family: "Comic Neue", "Arial", sans-serif;
+  color: #ffff00;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid #ffff00;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+  max-width: 600px;
+  animation: borderGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+  from {
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+  }
+  to {
+    box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff;
+  }
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: 3px 3px #ff00ff, 6px 6px #00ffff;
+  margin-bottom: 20px;
+  animation: textBounce 1s ease-in-out infinite;
+}
+
+@keyframes textBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.construction {
+  font-size: 4em;
+  margin: 20px 0;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+p {
+  font-size: 1.2em;
+  color: #00ffff;
+  text-shadow: 2px 2px #000;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.blink {
+  animation: blink 1s step-start infinite;
+  color: #ff00ff;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.counter {
+  background: #000;
+  color: #00ff00;
+  padding: 10px 20px;
+  border: 2px solid #00ff00;
+  display: inline-block;
+  margin: 20px 0;
+  font-family: "Courier New", monospace;
+  font-size: 1.1em;
+}
+
+.stars {
+  color: #ffff00;
+  font-size: 2em;
+  margin: 15px 0;
+}
+
+.email {
+  color: #00ffff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #c0c0c0;
+}
+
+.button {
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  color: #fff;
+  border: 2px solid #ffff00;
+  padding: 10px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px #ff00ff;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ffff;
+}
